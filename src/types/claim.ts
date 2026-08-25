@@ -10,3 +10,9 @@ export type ClaimStatus =
   | 'approved'
   | 'denied'
   | 'closed';
+
+export interface Coverage {
+  type: string;
+  deductibleCents: number;
+  policyLimitCents: number;
+}

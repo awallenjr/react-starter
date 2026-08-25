@@ -39,3 +39,5 @@ catches invalid values at compile time and drives exhaustive `switch`
 handling in the UI later.
 - Status values are modeled on real property-claim workflow states
 (appraisal, pa, partial approval) rather than a generic CRUD status set.
+- Money fields are stored as integer cents, not floats, to avoid
+floating-point rounding errors once line-item totals are computed.
