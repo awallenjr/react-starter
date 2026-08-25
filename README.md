@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# React Starter
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
@@ -30,3 +30,12 @@ If you are developing a production application, we recommend enabling type-aware
 ```
 
 See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+
+## Design Notes
+
+### Claim domain types
+- `status: ClaimStatus` is a string-literal union, not `string`
+catches invalid values at compile time and drives exhaustive `switch`
+handling in the UI later.
+- Status values are modeled on real property-claim workflow states
+(appraisal, pa, partial approval) rather than a generic CRUD status set.
