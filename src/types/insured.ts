@@ -1,7 +1,7 @@
+// name is split for sorting and personalization.
+// phone is a string not a number -- formatting, leading digits, and no arithmetic makes sense on it.
 export interface Insured {
-  // name is split for sorting and personalization.
   firstName: string;
   lastName: string;
-  // phone string for formatting, leading digits, and no need for arithmetic.
   phone: string;
 }
