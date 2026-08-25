@@ -12,7 +12,10 @@ export type ClaimStatus =
   | 'closed';
 
 export interface Coverage {
+  // type plain string since this value varies widely between carries and policies.
   type: string;
+  // money in cents rather than floats this avoids floating-point rounding errors once
+  // you start summing line items.
   deductibleCents: number;
   policyLimitCents: number;
 }
